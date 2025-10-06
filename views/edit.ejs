@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Post</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="box">
+  <h1>Edit your blog</h1>
+
+  <form method="POST" action="/edit/<%= id %>">
+    <input type="text" name="name" value="<%= post.title %>" required>
+    <textarea name="info" required><%= post.content %></textarea>
+    <button type="submit">Update</button>
+  </form>
+</div>
+</body>
+</html>
